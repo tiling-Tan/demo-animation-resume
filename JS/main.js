@@ -11,7 +11,7 @@ function writeCode(prefix, code, fn) {
             window.clearInterval(id)
             fn.call()
         }
-    }, 50)
+    }, 0)
 }
 function writeMarkdown(markdown,fn) { 
     let domPaper = document.querySelector('#paper > .content')
@@ -24,7 +24,17 @@ function writeMarkdown(markdown,fn) {
             window.clearInterval(id)
             fn.call()
         }
-    }, 50)
+    }, 0)
+}
+
+function createPaper(fn) {
+    let paper = document.createElement('div')
+    paper.id = 'paper'
+    let content = document.createElement('pre')
+    content.className = 'content'
+    paper.appendChild(content)
+    document.body.appendChild(paper)
+    fn.call()
 }
 
 
@@ -128,12 +138,4 @@ Email xxxxxxxxx
 手机 xxxxxxxxxx
 `
 
-function createPaper(fn) { 
-    let paper = document.createElement('div')
-    paper.id = 'paper'
-    let content = document.createElement('pre')
-    content.className = 'content'
-    paper.appendChild(content)
-    document.body.appendChild(paper)
-    fn.call()
-}
+
