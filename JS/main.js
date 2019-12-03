@@ -291,7 +291,6 @@ function writeCode(prefix, code) {
     let n = 0
     return new Promise(resolve => {
         codeId = setTimeout(write, duration)
-
         function write() {
             n = n + 1
             domCode.innerHTML = Prism.highlight(prefix + code.substring(0, n), Prism.languages.css, 'css');
@@ -329,6 +328,7 @@ function writeResume() {
     let n = 0
     return new Promise(resolve => {
         resumeId = setTimeout(write, duration)
+
         function write() {
             n = n + 1
             domPaper.innerHTML = resume.substring(0, n)
@@ -349,9 +349,8 @@ function skipResumeInput() {
     let paper = document.querySelector('.paper')
     return new Promise(resolve => {
         setTimeout(() => {
-            window.clearInterval(resumeId)
+            window.clearTimeout(resumeId)
             paper.innerHTML = resume
-            console.log(paper)
             paper.scrollTop = paper.scrollHeight
             resolve()
             $('#skip_inputResume').remove()
@@ -382,7 +381,7 @@ function adjustResume() {
 function skipAll() {
     return new Promise(resolve => {
         setTimeout(() => {
-            window.clearInterval(codeId)
+            window.clearTimeout(codeId)
             resolve()
             $('.skip').remove()
         }, 0)
@@ -413,10 +412,9 @@ function showFinalResume() {
     let code = $('#code_body')
     paper.addClass('breathe')
     code.removeClass('breathe')
-    code.innerHTML = Prism.highlight(code_ready + code_marked + code_beautify_resume, Prism.languages.css, 'css')
-    $('#styleTags').innerHTML = code_ready + code_marked + code_beautify_resume
-    code.scrollTop = code.scrollHeight
-    window.clearInterval(codeId)
+    code[0].innerHTML = Prism.highlight(code_ready + code_marked + code_beautify_resume, Prism.languages.css, 'css')
+    $('#styleTags')[0].innerHTML = code_ready + code_marked + code_beautify_resume
+    code[0].scrollTop = code[0].scrollHeight
     $('.options').css({'width': '23%'})
     $('a.downloadResume').addClass('show')
     $('.options').append($('a.downloadResume'))
