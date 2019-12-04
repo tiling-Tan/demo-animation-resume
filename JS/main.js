@@ -241,6 +241,11 @@ let code_beautify_resume = `
 #education p{
     top: 40px;
 }
+/* 
+ * 期待这张面孔出现在您的面试中
+ * 
+ *   --谭题伶 2019/12 *^_^*
+ */
 `
 
 let resumeId, codeId
