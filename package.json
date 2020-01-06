@@ -1,0 +1,31 @@
+{
+  "name": "demo-animation-resume",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "rm -rf ./dist | parcel index.html",
+    "build": "parcel build ./dist/index.html",
+    "predeploy": "rm -rf dist && parcel build index.html --public-url /CSS_resume/",
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tiling-Tan/demo-animation-resume.git"
+  },
+  "author": "tiling-Tan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tiling-Tan/demo-animation-resume/issues"
+  },
+  "homepage": "https://github.com/tiling-Tan/demo-animation-resume#readme",
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "marked": "^0.7.0",
+    "parcel-bundler": "^1.12.4"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.1.1"
+  }
+}
