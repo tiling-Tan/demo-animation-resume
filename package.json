@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "rm -rf ./dist | parcel index.html",
     "build": "parcel build ./dist/index.html",
-    "predeploy": "rm -rf dist && parcel build index.html --public-url /CSS_resume/",
+    "predeploy": "rm -rf dist && parcel build index.html --public-url /demo-animation-resume/",
     "deploy": "gh-pages -d dist"
   },
   "repository": {
