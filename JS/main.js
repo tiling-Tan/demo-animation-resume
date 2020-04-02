@@ -1,6 +1,16 @@
 import $ from 'jquery'
 import marked from 'marked'
 
+let renderer = new marked.Renderer();
+renderer.link = function(href, title, text) {
+    let link = marked.Renderer.prototype.link.call(this, href, title, text);
+    return link.replace("<a","<a target='_blank' ");
+};
+
+marked.setOptions({
+    renderer: renderer
+});
+
 let resume = `# 谭题伶
 1511-8911-908 | tiling.tan@foxmail.com | 英语水平: CET-4 | 广州
 作品集: https://tiling-tan.github.io/CSS_resume/index.html
@@ -33,38 +43,38 @@ GitHub: https://github.com/tiling-Tan
 ### 一个用Vue造的轮子-Twheels UI
 - 关键词：\`Vue.js\`、\`VuePress\`、\`ES6\`、\`Parcel\`、\`Npm Scripts\`、\`Mocha\`、\`SCSS\`、\`TravisCI\`
 - 项目介绍：该项目是参照 Framework7、Ant Design、Element UI 等 UI 库思路，做的一个基于 Vue 的简易 \`UI 组件库\`，目前已支持按钮、输入框、网格、布局、Toast、Tabs、Popover、手风琴等组件。每个组件均经历从 \`需求分析\` 到 \`Mocha 单元测试\`，并用 \`TravisCI 实现持续集成\`，最终以 VuePress 为基础 \`制作官方文档\`，发布于 npmjs.org。完成该项目使我对 Vue 的常用特征更加熟悉，同时提升了自己对 \`前端工程化流程以及单元测试重要性的深刻理解\`，近一步开源文化。
-- 项目源码：https://github.com/tiling-Tan/gulu-demo
 - 预览链接：https://tiling-tan.github.io/gulu-demo/
+- 项目源码：https://github.com/tiling-Tan/gulu-demo
 
 ### CNode 社区仿站
 - 关键词：\`Vue CLI\`、 \`Vue2\`、 \`Vue Router\`、\`Axios\`、\`ES6\`、\`Npm\`、\`SCSS\`
 - 项目介绍：该项目使用 Vue 还原 CNode 官方社区，项目调用 CNode 官方社区提供的 API，以 Vue CLI 创建项目模版，使用 Axios 获取数据，使用 Vue Router 进行前端路由的切换及传参，使用 watch 监听路由的变化，Webpack 打包。
-- 项目源码：https://github.com/tiling-Tan/cnode_demo
 - 预览链接：https://tiling-tan.github.io/cnode_demo/dist/index.html#/
+- 项目源码：https://github.com/tiling-Tan/cnode_demo
 
 ### 动态简历生成器
 - 关键词：\`JavaScript\`、\`Promise\`、\`变速\`、\`过渡动画\`、\`盒阴影\`
 - 项目介绍：该项目实现了一个 Markdown 简历的制作过程，在原生 JS 中使用 Promise 处理异步操作，利用 CSS3 实现过渡、动画、阴影和弹性布局等。
-- 项目源码：https://github.com/tiling-Tan/demo-animation-resume
 - 预览链接：https://tiling-tan.github.io/demo-animation-resume/
+- 项目源码：https://github.com/tiling-Tan/demo-animation-resume
 
 ### 个人在线主页
 - 关键词：\`jQuery\`、\`CSS3 过渡动画\`、\`组件化思想\`、\`MVC 思想\`、\`媒体查询\`
 - 项目介绍：此项目是本人的一个信息介绍页，包含基础信息、技能、项目展示以及留言板功能。有大量精美的动画，例如滚动时的导航栏及模块的浮起、导航栏 hover 动画、响应式设计等。
-- 项目源码：https://github.com/tiling-Tan/CSS_resume
 - 预览链接：https://tiling-tan.github.io/CSS_resume/index.html
+- 项目源码：https://github.com/tiling-Tan/CSS_resume
 
 ### 灵魂画手
 - 关键词：\`HTML5\`、\`Canvas\`、\`ES6\`、\`JavaScript\`
 - 项目介绍：是一个使用纯原生 JS 开发的，主要利用 HTML 5 的 Canvas API ，是我在学习原生 JS 及 Canvas 过程中开发的小工具。 其提供在 PC 及手机端在线画画、橡皮擦、画笔调色、画作删除等功能，并支持画作下载。
-- 项目源码：https://github.com/tiling-Tan/canvas-demo
 - 预览链接：https://tiling-tan.github.io/canvas-demo/index.html
+- 项目源码：https://github.com/tiling-Tan/canvas-demo
 
 ### 来画一只皮卡丘
 - 关键词：\`JavaScript\`、\`CSS3\`、\`HTML5\`、\`ES6\`
 - 项目介绍：是一个使用纯原生 JS 开发的，动态显示 CSS 画一个皮卡丘过程的小作品。该作品主要思路是通过间隔计时器遍历预先设置在 preview 标签内代码，将其一个个显示在页面上，并在 style 标签上作同样处理，以使代码 CSS 生效。此外，实现了 CSS 高亮效果及调速功能。
-- 项目源码：https://github.com/tiling-Tan/Pikachu-demo
 - 预览链接：https://tiling-tan.github.io/Pikachu-demo/index.html
+- 项目源码：https://github.com/tiling-Tan/Pikachu-demo
 
 ## 工作经历
 ### 巨联科技(广州)有限公司
