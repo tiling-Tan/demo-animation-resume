@@ -16,7 +16,7 @@ let resume = `# 谭题伶
 作品集: https://tiling-tan.github.io/CSS_resume/index.html
 博客: https://www.jianshu.com/u/1def2c00aff6
 GitHub: https://github.com/tiling-Tan
-2018届本科网络工程专业毕业 | 23岁 | 应聘前端开发工程师
+本科 | 24岁 | 应聘前端开发工程师
 
 ## 专业技能
 - HTML5 && CSS3 
