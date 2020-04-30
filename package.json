@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/tiling-Tan/demo-animation-resume#readme",
   "dependencies": {
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "marked": "^0.7.0",
     "parcel-bundler": "^1.12.4"
   },
