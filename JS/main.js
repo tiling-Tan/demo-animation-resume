@@ -67,7 +67,7 @@ GitHub: https://github.com/tiling-Tan
 ### 灵魂画手
 - 关键词：\`HTML5\`、\`Canvas\`、\`ES6\`、\`JavaScript\`
 - 项目介绍：是一个使用纯原生 JS 开发的，主要利用 HTML 5 的 Canvas API ，是我在学习原生 JS 及 Canvas 过程中开发的小工具。 其提供在 PC 及手机端在线画画、橡皮擦、画笔调色、画作删除等功能，并支持画作下载。
-- 预览链接：https://tiling-tan.github.io/canvas-demo/index.html
+- 预览链接：https://tiling-tan.github.io/canvas-demo/
 - 项目源码：https://github.com/tiling-Tan/canvas-demo
 
 ### 来画一只皮卡丘
