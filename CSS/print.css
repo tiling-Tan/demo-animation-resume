@@ -36,6 +36,7 @@
 
 #information {
     text-align: center;
+    margin-top: 0;
 }
 
 #information p {
@@ -91,8 +92,8 @@
     padding: 2px 4px;
     margin-right: 4px;
     border-radius: 4px;
-    color: #455A64;
-    background-color: #455a6426;
+    color: #C55A11;
+    background-color: #FBE5D6;
     height: 18px;
     line-height: 18px;
     font-size: 90%;
