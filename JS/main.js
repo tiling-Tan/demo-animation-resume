@@ -55,7 +55,7 @@ let resume = `# 谭题伶
 ### 动态简历生成器
 - 主要技术：\`JavaScript\`、\`Promise\`、\`变速\`、\`过渡动画\`、\`盒阴影\`
 - 项目介绍：该项目实现了一个 Markdown 简历的制作过程，在原生 JS 中使用 Promise 处理异步操作，利用 CSS3 实现过渡、动画、阴影和弹性布局等。
-- [项目预览](https://tiling-tan.github.io/demo-animation-resume/) | [项目源码](https://github.com/tiling-Tan/demo-animation-resume)
+- [项目预览](https://tiling-tan.github.io/demo-animation-resume/index.html) | [项目源码](https://github.com/tiling-Tan/demo-animation-resume)
 
 ### 个人在线主页
 - 主要技术：\`jQuery\`、\`CSS3 过渡动画\`、\`组件化思想\`、\`MVC 思想\`、\`媒体查询\`
